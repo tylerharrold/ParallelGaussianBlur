@@ -14,7 +14,7 @@ const double PI = 3.1415927;
 */
 CImg<unsigned char> gaussBlur(CImg<unsigned char> src, int w, int h, float r) {
 	CImg<unsigned char> result= src;
-	
+
 	int rs = (int)ceil(r * 2.57);     // significant radius
 	for (int i = 0; i < h; i++) { //for every column
 		for (int j = 0; j < w; j++) { //for every row
@@ -60,7 +60,7 @@ int main() {
 	high_resolution_clock::time_point end = high_resolution_clock::now();
 
 	// display the elapsed time for our blur method
-	auto duration = duration_cast<microseconds>(end - start).count();
+	auto duration = duration_cast<milliseconds>(end - start).count();
 	cout << duration;
 
 	/*
